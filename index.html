@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A11.2025.16350 - Syahdan - TailwindCSS</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="w-screen h-screen justify-items-center content-center bg-gradient-to-br from-indigo-600 to-blue-500">
+        <h1 class="text-3xl font-extrabold text-white text-shadow-lg text-shadow-gray-700">
+            Struk Tarik Tunai BRI
+        </h1>
+        <section class="flex justify-center gap-16 mt-2">
+            <div class="bg-white rounded py-8 px-6 min-w-[300px]">
+                <div class="flex justify-center">
+                    <img src="./assets/logo/atm-link-seeklogo.png" class="max-w-[50px]" alt="Link ATM - Logo" />
+                </div>
+                <div class="grid grid-cols-2 gap-x-4">
+                    <div>
+                        <span>TANGGAL&nbsp;</span>
+                        <span>:</span>
+                        <span>&nbsp;30/07/25</span>
+                    </div>
+                    <div>
+                        <span>WAKTU&nbsp;</span>
+                        <span>:</span>
+                        <span>&nbsp;19:08:47</span>
+                    </div>
+                    <div>
+                        <span>ATM ID&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                        <span>:</span>
+                        <span>&nbsp;95215</span>
+                    </div>
+                    <div>
+                        <span>NO.REF&nbsp;</span>
+                        <span>:</span>
+                        <span>&nbsp;30153</span>
+                    </div>
+                    <div class="grid-cols-2">
+                        <span>NO.KARTU</span>
+                        <span>:</span>
+                        <span style="letter-spacing: 1px">&nbsp;601301..4027</span>
+                    </div>
+                </div>
+                <div class="flex justify-center my-2">TARIK TUNAI BRI DEBIT</div>
+                <div class="flex justify-start max-w-[75%]">
+                    <span>JUMLAH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>:&nbsp;</span>
+                    <div class="flex justify-between min-w-[100%]">
+                        <span>RP</span>
+                        <span>200.000,00</span>
+                    </div>
+                </div>
+                <div class="flex justify-start max-w-[75%]">
+                    <span>JUMLAH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                    <span>:&nbsp;</span>
+                    <div class="flex justify-between min-w-[100%]">
+                        <span>RP</span>
+                        <span>36.063,80</span>
+                    </div>
+                </div>
+                <div class="w-full font-mono mt-3 mb-2" style="white-space: nowrap;">
+                    <span id="tulisan"></span>
+                </div>
+                <div class="flex justify-center">CONTACT BRI</div>
+                <div class="flex justify-center">1500017</div>
+            </div>
+            <div class="bg-white rounded py-8 px-6 min-w-[300px]">
+                <h1>Foto struk asli</h1>
+                <img src="./assets/pictures/struk-asli.jpg" style="max-width: 200px;" alt="">
+            </div>
+        </section>
+    </div>
+    <script>
+        function write_footer() {
+            const text = " TRANSAKSI SUKSES ";
+            const double_dot = "::::";
+            const container = document.getElementById('tulisan');
+
+            const width_of_container = window.innerWidth;
+            const width_of_character = 12.5;
+            const total_of_character = Math.floor(width_of_container / width_of_character);
+            const padding_char = Math.floor((total_of_character - text.length) / (1.45 * double_dot.length));
+
+            const left = double_dot.repeat(padding_char);
+            const right = double_dot.repeat(padding_char);
+
+            container.innerText = left + text + right;
+        }
+        write_footer();
+    </script>
+</body>
+
+</html>

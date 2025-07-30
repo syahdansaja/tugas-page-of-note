@@ -1,0 +1,2 @@
+link repository = https://github.com/syahdansaja/tugas-page-of-note.git
+module node js sudha terhapus untuk meminimalisir ukuran folder
